@@ -9,16 +9,21 @@ export default {
     "./error.vue"
   ],
   theme: {
-    colors: {
-      black: '#000000',
-      white: '#fff',
-      grey: {
-        light: '#F6F7F9',
-        dark: '#c3d4e9'
-      },
-      blue: {
-        dark: '#3563E9'
+    extend: {
+      colors: {
+        grey: {
+          light: '#F6F7F9',
+          dark: '#c3d4e9'
+        },
+        blue: {
+          dark: '#3563E9',
+          light: '#54A6FF'
+        }
       }
+    },
+    backgroundImage: {
+      'card-light': "url('/assets/images/card-bg-light.svg')",
+      'card-dark': "url('/assets/images/card-bg-dark.svg')"
     }
   },
   plugins: [],

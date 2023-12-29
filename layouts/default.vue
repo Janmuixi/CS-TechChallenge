@@ -4,3 +4,7 @@
         <slot />
     </div>
 </template>
+<script lang="ts">
+    const store = useCarsStore()
+    store.getStartingData()
+</script>

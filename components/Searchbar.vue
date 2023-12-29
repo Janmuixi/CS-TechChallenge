@@ -1,6 +1,6 @@
 <template>
     <div class='w-[1032px] h-[44px] border rounded-full border-grey-dark/40 flex justify-start items-center'>
-        <img class="ml-[20px] size-6 cursor-pointer" src="@/assets/images/search-normal.svg" alt="search-button">
+        <img class="ml-[20px] size-6 cursor-pointer transition-all hover:size-7" src="@/assets/images/search-normal.svg" alt="search-button">
         <input 
             id="searchbar-cross"
             placeholder="Search something here" 
@@ -9,7 +9,7 @@
             v-model="searchText"
             @keyup="searchTimeOut()"
         >
-        <img class="ml-[20px] size-6 cursor-pointer" src="@/assets/images/icons8-close.svg" alt="close-button" @click="emptySearchText">
+        <img v-if="searchText" class="ml-[20px] size-6 cursor-pointer transition-all hover:size-7" src="@/assets/images/icons8-close.svg" alt="close-button" @click="emptySearchText">
     </div>
 </template>
 

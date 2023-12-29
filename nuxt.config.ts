@@ -6,6 +6,7 @@ export default defineNuxtConfig({
           'Plus+Jakarta+Sans': true
         }
     }],
+    '@pinia/nuxt'
   ],
   devtools: { enabled: true },
   css: ['~/assets/css/main.css'],
