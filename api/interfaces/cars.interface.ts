@@ -7,6 +7,7 @@ export interface CarDTO {
     pricePerDay: number
     id: string
     img: string
+    liked: boolean
 }
 
 export interface AllCarsMetaDTO {

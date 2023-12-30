@@ -16,4 +16,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  alias: {
+    '@images': './assets/images'
+  }
 })

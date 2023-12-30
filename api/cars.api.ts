@@ -14,7 +14,8 @@ class CarsRepository {
         return (await res).data
     }
     async getPopularCars(): Promise<CarDTO[]> {
-        return axios.get(URL_CARS_POPULAR)
+        const { data } = await axios.get(URL_CARS_POPULAR)
+        return data
     }
 }
 

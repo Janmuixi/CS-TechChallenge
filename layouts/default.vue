@@ -1,10 +1,10 @@
 <template>
-    <div class='h-screen bg-grey-light'>
+    <div class='bg-grey-light'>
         <Navbar />
         <slot />
     </div>
 </template>
-<script lang="ts">
+<script setup lang="ts">
     const store = useCarsStore()
     store.getStartingData()
 </script>

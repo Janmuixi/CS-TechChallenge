@@ -13,7 +13,8 @@ export default {
       colors: {
         grey: {
           light: '#F6F7F9',
-          dark: '#c3d4e9'
+          dark: '#c3d4e9',
+          standard: '#90A3BF'
         },
         blue: {
           dark: '#3563E9',

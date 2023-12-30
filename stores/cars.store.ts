@@ -9,7 +9,8 @@ export const useCarsStore = defineStore('cars', {
     currentPage: 1,
     lastPage: 0,
     totalCars: 0,
-    isLoading: false
+    isLoading: false,
+    likedCars: <string[]>[]
   }),
   actions: {
     async getAllCars() {
@@ -29,7 +30,18 @@ export const useCarsStore = defineStore('cars', {
         } finally {
             this.isLoading = false
         }
-        
+    },
+    setPopularCarLiked(id: string) {
+      const car = this.popularCars.find(car => car.id === id)
+      if (car) {
+        car.liked = !car.liked
+      }
+    },
+    setCarLiked(id: string) {
+      const car = this.cars.find(car => car.id === id)
+      if (car) {
+        car.liked = !car.liked
+      }
     }
   }
 })
