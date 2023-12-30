@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[120px] h-[44px] rounded-[4px] flex items-center cursor-pointer" :class="buttonColor()">
+    <div class="min-w-[120px] h-[44px] rounded-[4px] items-center cursor-pointer inline-flex" :class="buttonColor()">
         <div class="px-5 text-white text-[16px]">
             {{text}}
         </div>
@@ -8,7 +8,7 @@
 
 <script setup lang="ts">
 import type { PropType } from 'vue';
-import { ButtonThemes } from './components.enums';
+import { ButtonThemes } from './enums/components.enums';
 
 const props = defineProps({ 
     color: String as PropType<ButtonThemes>,

@@ -6,25 +6,27 @@
             placeholder="Search something here" 
             class="p-3 w-[90%] h-full rounded-full border-none outline-none" 
             type="text"
-            v-model="searchText"
+            v-model="store.searchText"
             @keyup="searchTimeOut()"
         >
-        <img v-if="searchText" class="ml-[20px] size-6 cursor-pointer transition-all hover:size-7" src="@/assets/images/icons8-close.svg" alt="close-button" @click="emptySearchText">
+        <img v-if="store.searchText" class="ml-[20px] size-6 cursor-pointer transition-all hover:size-7" src="@/assets/images/icons8-close.svg" alt="close-button" @click="emptySearchText">
     </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-
-const searchText = ref('')
+const store = useCarsStore()
 let timer: any
 
 const emptySearchText = () => {
-    searchText.value = ''
+    store.searchText = ''
+    fetchCars()
     document.getElementById('searchbar-cross')?.focus()
 } 
 
 const fetchCars = () => {
+    store.currentPage = 1
+    store.cars = []
+    store.getAllCars()
     console.log('fetch cars')
 }
 

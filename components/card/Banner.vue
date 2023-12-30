@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { CardThemes, ButtonThemes } from '../components.enums';
+import { CardThemes, ButtonThemes } from '../enums/components.enums';
 
 export interface Props { 
     theme: CardThemes,

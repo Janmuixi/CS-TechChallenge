@@ -10,12 +10,16 @@ export const useCarsStore = defineStore('cars', {
     lastPage: 0,
     totalCars: 0,
     isLoading: false,
-    likedCars: <string[]>[]
+    likedCars: <string[]>[],
+    searchText: ''
   }),
   actions: {
     async getAllCars() {
-        const { data, meta } = await CarsService.getAllCars(this.currentPage)
-        this.cars = data
+        const { data, meta } = await CarsService.getAllCars(this.searchText, this.currentPage)
+
+        let newCarsList = [...this.cars,...data]
+        newCarsList = this.deleteDuplicatedCars(newCarsList)
+        this.cars = newCarsList
         const {last_page: lastPage, total} = meta
         this.lastPage = lastPage
         this.totalCars = total
@@ -42,6 +46,22 @@ export const useCarsStore = defineStore('cars', {
       if (car) {
         car.liked = !car.liked
       }
+    },
+    addNextPage() {
+      this.currentPage++
+      this.getAllCars()
+    },
+    deleteDuplicatedCars(cars: Car[]) {
+      const seenValues = new Set();
+
+      return cars.reduce((result: Car[], obj: Car) => {
+        const value = obj['id'];
+        if (!seenValues.has(value)) {
+          seenValues.add(value);
+          result.push(obj);
+        }
+        return result;
+      }, []);
     }
   }
 })

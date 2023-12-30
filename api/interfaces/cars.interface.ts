@@ -19,3 +19,18 @@ export interface AllCarsDTO {
     data: CarDTO[],
     meta: AllCarsMetaDTO
 }
+
+export interface CarDetailsDTO {
+    name: string;
+    type: string;
+    description: string;
+    gasolineLiter: number;
+    kindOfTransition: string;
+    people: number;
+    pricePerDay: number;
+    id: string;
+    img: string;
+    images: {
+      url: string;
+    }[];
+}
