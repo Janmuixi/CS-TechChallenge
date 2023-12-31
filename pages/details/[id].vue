@@ -10,7 +10,11 @@
 <script setup lang="ts">
 import CarsService from '~/services/cars.service';
 
+const store = useCarsStore()
 const route = useRoute()
 const carDetails = await CarsService.getCarDetails(route.params.id as string)  
 
+onMounted(()=> {
+    store.searchText = ""
+})
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <NuxtLink :to="`/details/${props.car.id}`" class="cursor-pointer w-[304px] h-[388px] rounded-[10px] bg-white p-6 hover:shadow-lg">
+    <NuxtLink v-on:click.native="handleClick()" :to="`/details/${props.car.id}`" class="cursor-pointer w-[304px] h-[388px] rounded-[10px] bg-white p-6 hover:shadow-lg">
         <div class="flex justify-between">
             <div class="w-[200px] font-bold size-5">{{ props.car.name }}</div>
             <div class="cursor-pointer"  @click.prevent="$emit('liked')">
@@ -38,10 +38,14 @@
 <script setup lang="ts">
 import type { Car } from '~/services/interfaces/cars.interface';
 
+const store = useCarsStore()
 const props = defineProps({
     car: { type: Object as PropType<Car>, required: true }
 })
-
+const handleClick = () => {
+    store.searchText = ""
+    store.getAllCars()
+}
 </script>
 
 <style>
