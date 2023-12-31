@@ -28,9 +28,6 @@ export default {
       'card-dark': "url('/assets/images/card-bg-dark.svg')",
       'card-dark-no-car': "url('/assets/images/card-bg-dark-no-car.svg')"
     }
-  },
-  plugins: [
-    require('@tailwindcss/line-clamp')
-  ],
+  }
 }
 

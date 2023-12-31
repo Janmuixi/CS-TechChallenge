@@ -8,7 +8,7 @@
                     
                 </div>
                 <div>
-                    <table class="h-[244px] table-fixed w-[600px] text-left">
+                    <table class="h-[244px] table-fixed md:w-[600px] w-[300px] text-left">
                         <thead class="h-[60px]">
                             <tr>
                             <th>About</th>

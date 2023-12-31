@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[492px]">
+    <div class="md:w-[492px] w-[400px]">
         <div class="h-[360px] rounded-[10px]">
             <div v-if="!selectedImage" class="h-[360px] rounded-[10px] bg-card-dark-no-car relative">
                 <div class="p-6 text-white w-[420px]">
@@ -12,11 +12,11 @@
         </div>
         
         <div class="flex justify-between mt-[26px]">
-            <div class="w-[148px] h-[124px] rounded-[10px] bg-card-dark-no-car relative" :class="{ 'border-blue-dark border-2 p-2': !selectedImage }" @click="setSelectedImage('')">
+            <div class="md:w-[148px] md:h-[124px] w-[128px] h-[104px] rounded-[10px] bg-card-dark-no-car relative" :class="{ 'border-blue-dark border-2 p-2': !selectedImage }" @click="setSelectedImage('')">
                 <img class="absolute bottom-0  left-[50%] translate-x-[-50%] w-[148px]" :src="defaultImage" alt="car-image">
             </div>
-            <img class="w-[148px] h-[124px] rounded-[10px]" :class="{ 'border-blue-dark border-2 p-1': selectedImage === props.extraImage1 }" :src="props.extraImage1" @click="setSelectedImage(props.extraImage1)">
-            <img class="w-[148px] h-[124px] rounded-[10px]" :class="{ 'border-blue-dark border-2 p-1': selectedImage === props.extraImage2 }" :src="props.extraImage2" @click="setSelectedImage(props.extraImage2)">
+            <img class="md:w-[148px] md:h-[124px] w-[128px] h-[104px] rounded-[10px]" :class="{ 'border-blue-dark border-2 p-1': selectedImage === props.extraImage1 }" :src="props.extraImage1" @click="setSelectedImage(props.extraImage1)">
+            <img class="md:w-[148px] md:h-[124px] w-[128px] h-[104px] rounded-[10px]" :class="{ 'border-blue-dark border-2 p-1': selectedImage === props.extraImage2 }" :src="props.extraImage2" @click="setSelectedImage(props.extraImage2)">
         </div>
     </div>
 </template>
