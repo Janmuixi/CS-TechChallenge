@@ -1,10 +1,10 @@
 <template>
-    <div class='w-[1032px] h-[44px] border rounded-full border-grey-dark/40 flex justify-start items-center'>
+    <div class='w-[60%] h-[44px] border lg:rounded-full  rounded-[10px] border-grey-dark/40 flex justify-start items-center'>
         <img class="ml-[20px] size-6 cursor-pointer transition-all hover:size-7" src="@/assets/images/search-normal.svg" alt="search-button">
         <input 
             id="searchbar-cross"
             placeholder="Search something here" 
-            class="p-3 w-[90%] h-full rounded-full border-none outline-none" 
+            class="p-3 lg:w-[90%] w-[60%] h-full border-none outline-none lg:rounded-full  rounded-[10px]" 
             type="text"
             v-model="store.searchText"
             @keyup="searchTimeOut()"

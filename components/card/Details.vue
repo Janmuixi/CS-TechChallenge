@@ -1,6 +1,6 @@
 <template>
     <div class="flex justify-between">
-            <Carrousel :default-image="props.details.img" :extra-image1="props.details.images[0].url" :extra-image2="props.details.images[1].url" />
+            <Carrousel :default-image="details.img" :extra-image1="details.images[0].url" :extra-image2="details.images[1].url" />
             <div class="w-[788px] h-[508px] rounded-[10px] p-6 bg-white relative">
                 <div class="text-3xl font-bold">{{ details.name }}</div>
                 <div class="mt-4 flex justify-start">

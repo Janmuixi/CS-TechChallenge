@@ -2,7 +2,7 @@
     <NuxtLink :to="`/details/${props.car.id}`" class="cursor-pointer w-[304px] h-[388px] rounded-[10px] bg-white p-6 hover:shadow-lg">
         <div class="flex justify-between">
             <div class="w-[200px] font-bold size-5">{{ props.car.name }}</div>
-            <div class="cursor-pointer"  @click="$emit('liked')">
+            <div class="cursor-pointer"  @click.prevent="$emit('liked')">
                 <img v-if="!props.car.liked" src="@/assets/images/Like.svg" alt="like-button">
                 <img v-else src="@/assets/images/heart-filled.svg" alt="like-button">
             </div>
@@ -41,8 +41,6 @@ import type { Car } from '~/services/interfaces/cars.interface';
 const props = defineProps({
     car: { type: Object as PropType<Car>, required: true }
 })
-
-const store = useCarsStore()
 
 </script>
 
