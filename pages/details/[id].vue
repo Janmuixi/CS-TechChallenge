@@ -12,4 +12,5 @@ import CarsService from '~/services/cars.service';
 
 const route = useRoute()
 const carDetails = await CarsService.getCarDetails(route.params.id as string)  
+
 </script>
