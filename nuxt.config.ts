@@ -18,5 +18,11 @@ export default defineNuxtConfig({
   },
   alias: {
     '@images': './assets/images'
+  },
+  app: {
+    head: {
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1'
+    }
   }
 })

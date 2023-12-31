@@ -1,7 +1,7 @@
 <template>
     <footer>
         <div class="h-[480px] bg-white pt-[80px] relative">
-            <div class=" px-[60px] flex justify-between">
+            <div class=" px-[60px] flex justify-between flex-col md:flex-row">
                 <div class="w-[292px] align text-left">
                     <div class="text-blue-dark text-3xl font-bold mr-[64px]cursor-pointer"><span>DM</span></div>
                     <div class="mt-4 text-grey-darker/60">Our vision is to provide convenience and help increase your sales business.</div>

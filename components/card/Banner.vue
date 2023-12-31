@@ -1,5 +1,5 @@
 <template>
-    <div class="w-[640px] h-[360px] rounded-[10px]" :class="cardBg()">
+    <div class="w-[400px] lg:w-[640px] h-[360px] rounded-[10px]" :class="cardBg()">
         <div class="p-6 text-white w-[354px]">
             <p class="text-[32px]">{{title}}</p>
             <p class="mt-4 text-[16px]">{{description}}</p>
