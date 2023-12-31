@@ -29,5 +29,8 @@
     "@pinia/nuxt": "^0.5.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "pinia": "^2.1.7"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }
