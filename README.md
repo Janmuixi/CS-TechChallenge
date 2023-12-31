@@ -49,3 +49,8 @@ Problems I faced:
 1. There are duplicated ids on the backend's cars list, so I had to create a function to remove the cars with duplicated IDs from the list. But this means that sometimes I get 8 items from the api but I have to discard 7 of them, so the pagination looks a bit weird.
 2. Using nuxt I had problems creating dynamic imports on local images, I would fix it with more time
 ```
+
+## DEMO
+
+https://github.com/Janmuixi/CS-TechChallenge/assets/34319268/96f96755-fd5a-4fdb-817a-3e8b0f228aa4
+
