@@ -19,11 +19,12 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 # yarn
 yarn dev
+```
 
 ## Thought process
 
 Steps I followed:
-
+```
 1. Create the project and install libraries like Nuxt 3
 2. Create a Nuxt layout and a main page
 3. Build the navigation bar
@@ -40,8 +41,11 @@ Steps I followed:
 14. Add testing to pinia store functions
 15. Fixed a few problems I had with responsiveness in the lists, so I changed from using margins and media queries to just using flex gaps and flex wraps
 16. I added the empty state to the lists
+```
 
 Problems I faced:
 
+```
 1. There are duplicated ids on the backend's cars list, so I had to create a function to remove the cars with duplicated IDs from the list. But this means that sometimes I get 8 items from the api but I have to discard 7 of them, so the pagination looks a bit weird.
 2. Using nuxt I had problems creating dynamic imports on local images, I would fix it with more time
+```
