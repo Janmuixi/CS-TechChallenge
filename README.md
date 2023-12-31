@@ -1,7 +1,3 @@
-# Nuxt 3 Minimal Starter
-
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
-
 ## Setup
 
 Make sure to install the dependencies:
@@ -10,14 +6,8 @@ Make sure to install the dependencies:
 # npm
 npm install
 
-# pnpm
-pnpm install
-
 # yarn
 yarn install
-
-# bun
-bun install
 ```
 
 ## Development Server
@@ -27,49 +17,31 @@ Start the development server on `http://localhost:3000`:
 ```bash
 # npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
 # yarn
 yarn dev
 
-# bun
-bun run dev
-```
+## Thought process
 
-## Production
+Steps I followed:
 
-Build the application for production:
+1. Create the project and install libraries like Nuxt 3
+2. Create a Nuxt layout and a main page
+3. Build the navigation bar
+4. Connect to the API using axios
+5. Store backend in pinia as well as favorites
+6. Create static Promo banner components
+7. Create Popular and Recommended car lists
+8. Add pagination to the Recommended cars list
+9. Make search from search box resend request to API and refresh the list
+10. Create footer
+11. Create Car Details page
+12. Make the two pages responsive
+13. Add Nitro Proxy config to avoid CORS error
+14. Add testing to pinia store functions
+15. Fixed a few problems I had with responsiveness in the lists, so I changed from using margins and media queries to just using flex gaps and flex wraps
+16. I added the empty state to the lists
 
-```bash
-# npm
-npm run build
+Problems I faced:
 
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+1. There are duplicated ids on the backend's cars list, so I had to create a function to remove the cars with duplicated IDs from the list. But this means that sometimes I get 8 items from the api but I have to discard 7 of them, so the pagination looks a bit weird.
+2. Using nuxt I had problems creating dynamic imports on local images, I would fix it with more time
