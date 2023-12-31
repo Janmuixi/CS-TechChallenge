@@ -13,8 +13,8 @@ export default {
       colors: {
         grey: {
           light: '#F6F7F9',
-          dark: '#c3d4e9',
           standard: '#90A3BF',
+          dark: '#c3d4e9',
           darker: '#131313'
         },
         blue: {
@@ -25,9 +25,12 @@ export default {
     },
     backgroundImage: {
       'card-light': "url('/assets/images/card-bg-light.svg')",
-      'card-dark': "url('/assets/images/card-bg-dark.svg')"
+      'card-dark': "url('/assets/images/card-bg-dark.svg')",
+      'card-dark-no-car': "url('/assets/images/card-bg-dark-no-car.svg')"
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp')
+  ],
 }
 
