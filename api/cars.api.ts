@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { AllCarsDTO, CarDTO, CarDetailsDTO } from './interfaces/cars.interface'
 
-const URL_BASE = 'https://dm-assignment-commonshare.koyeb.app/api'
+const URL_BASE = '/api'
 const URL_CARS = `${URL_BASE}/cars`
 const URL_CARS_POPULAR = `${URL_CARS}/popular`
 
